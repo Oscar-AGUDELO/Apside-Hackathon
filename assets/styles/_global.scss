@@ -12,6 +12,21 @@
     
 }
 
+.card-title {
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    margin-top: 80%;
+}
+ .card-agencies:hover {
+    transform:scale(1.1);
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+ }
+
+ .card-agencies {
+    transition:.2s;
+    transform-origin:center;
+    border-radius: 74px;
+ }
 .rounded-box {
     border-radius: 21px;
     

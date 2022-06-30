@@ -1,20 +1,187 @@
-{% extends 'layoutFull.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Hello AgenciesController!{% endblock %}
+{% block title %}Hello AgenciesController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Utilisateur/Desktop/WCS/hackaton 2/Apside-Hackathon/src/Controller/AgenciesController.php'|file_link(0) }}">src/Controller/AgenciesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Utilisateur/Desktop/WCS/hackaton 2/Apside-Hackathon/templates/agencies/index.html.twig'|file_link(0) }}">templates/agencies/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<div class="container-fluid bg-info" style="background-image: url({{ asset('build/images/map.png') }});
+										background-repeat: no-repeat;
+										">>
+		<div class="row p-5">
+			<h1 class="text-primary fw-bold">The agencies</h1>
+			<p class="fs-1 fw-bold text-secondary">CLOSE TO OUR CUSTOMERS</p>
+            <div class="col-lg-3 d-flex align-items-end">
+                <img class="" height="auto" src="{{ asset('build/images/miss.svg') }}" alt="miss">
+            </div>               
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/toulouse.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<p class="fw-bold fs-4 card-title text-center">Apside TOULOUSE</p>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/dijon.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside DIJON</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/rennes.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside RENNES</h1>
+				</div>
+			</div>
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/orlean.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside ORLÉANS</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/geneve.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside GENÈVE</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/nice.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside NICE</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/munich.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside MUNICH</h1>
+				</div>
+			</div>
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/strasbourg.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside STRASBOURG</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/canada.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside CANADA</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/bruxelles.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside BRUXELLES</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/montpellier.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside MONTPELLIER</h1>
+				</div>
+			</div>
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/lille.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside LILLE</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/bordeaux.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside BORDEAUX</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/paris.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside PARIS</h1>
+				</div>
+			</div>
+            <div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/casablanca.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside CASABLANCA</h1>
+				</div>
+			</div>
+			<div class="col-xl-3 col-sm-4">
+				<div class="card-agencies bg-image d-flex justify-content-center align-items-center m-3 d-block mx-auto" style="
+						              background-image: url({{ asset('build/images/aveiro.jpg') }});
+						              height: 380px;
+                                      width: 380px;
+									  background-size: cover;
+						            ">
+					<h1 class="fw-bold fs-4 card-title text-center">Apside AVEIRO</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 {% endblock %}
