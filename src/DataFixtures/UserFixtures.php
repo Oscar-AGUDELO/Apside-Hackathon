@@ -9,6 +9,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class UserFixtures extends Fixture
 {
+    
     public function load(ObjectManager $manager): void
     {
         
@@ -24,7 +25,7 @@ class UserFixtures extends Fixture
             $user->setSkills($faker->text);
             $user->setImage($faker->imageUrl(640, 480, 'people'));
             $user->setBio($faker->realText(200));
-            $user->setRole('ROLE_USER');
+            $user->setRole($faker->randomElement(['ROLE_USER', 'ROLE_ADMIN']));
             $user->setType($faker->randomElement(['Apsiders', 'Customers']));
             $user->setAgency($this->getReference('agency_' . $i));
             $manager->persist($user);
