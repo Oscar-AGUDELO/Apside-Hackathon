@@ -1,26 +1,47 @@
 {% extends 'layoutFull.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Hello HomeController!
+{% endblock %}
 
 {% block body %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="mt-5 text-center">Hello Alex, Mélissa, Tushar</h1>
+
+	<div class="container-fluid d-flex justify-content-between p-5">
+		<img src="{{ asset('build/images/title_home.svg') }}" alt="Title for home page">
+		<img src="{{ asset('build/images/user_logged.svg') }}" alt="Window for user logged">
+	</div>
+
+	<div class="container d-flex justify-content-center ms-5">
+		<div class="d-flex flex-column">
+            <a href="#"><img src="{{ asset('build/images/button_myagency.svg') }}" alt="button" class="mb-3"></a>
+            <a href="#"><img src="{{ asset('build/images/button_theagencies.svg') }}" alt="button" class="mb-3"></a>
+            <a href="#"><img src="{{ asset('build/images/button_theapsider.svg') }}" alt="button" class="mb-3"></a>
+            <a href="#"><img src="{{ asset('build/images/button_theprojects.svg') }}" alt="button" class="mb-3"></a>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <p class="mt-5 text-center fs-5">Salut pour info dans ce repo il y a toutes les dépendances front d'installer de base, bootstrap, sass, yarn. J'ai mis une police par défaut changer là si vous voulez. <br>
-                J'ai rajouté le fichier bash, mais inutile de le lancer pour l'instant tant qu'on à pas de migrations. <br>
-                Normalement vous avez juste à faire un composer install et yarn install.    
-            </p>
+        <div class="d-flex flex-column mt-5 ms-3">
+                <a href="#"><img src="{{ asset('build/images/button_theclients.svg') }}" alt="button" class="mb-3"></a>
+                <a href="#"><img src="{{ asset('build/images/button_thepartners.svg') }}" alt="button" class="mb-3"></a>
+                <a href="#"><img src="{{ asset('build/images/button_myprojects.png') }}" alt="button" class="mb-3"></a>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="mt-5 text-center">Let's get started !</h2>
-        </div>
-    </div>
-</div>
+    <div class="container d-flex justify-content-center">
+		<img src="{{ asset('build/images/illu_home.svg') }}" alt="Illustration home page">
+	</div>
+
+
+	{# <div class="container">
+	    <div class="row">
+	        <div class="col-md-12">
+	            <img src="{{ asset('build/images/title_home.svg') }}" alt="Title for home page">
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="col-lg-12">
+	            <img src="{{ asset('build/images/button_home.svg') }}" alt="" class="mt-5">
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="col-md-12">
+	            <h2 class="mt-5 text-center">Let's get started !</h2>
+	        </div>
+	    </div>
+	</div> #}
 {% endblock %}
