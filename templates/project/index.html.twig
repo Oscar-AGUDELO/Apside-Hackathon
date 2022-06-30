@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid mt-5 ps-5 pe-5">
+<div class="container-fluid ps-5 pe-5">
 	<div class="row">
 		<div class="col-lg-8 mt-5">
 			<img src="{{ asset('build/images/title_project.svg') }}" alt="Title for home page">
@@ -47,9 +47,13 @@
 		<div class="col-lg-4">
 			<img class="float-end" src="{{ asset('build/images/todolist.svg')}}" alt="">
 		</div>
-		<div class="col-lg-4">
-			<img class="float-end me-5 mt-5" src="{{ asset('build/images/widecalendar.svg')}}" alt="">
-			<img class ="float-end mt-4" src="{{ asset('build/images/peoples.svg')}}" alt="">
+		<div class="col-lg-4 float-end">
+			<div class="float-end mb-5">
+			<img  src="{{ asset('build/images/widecalendar.svg')}}" alt="">
+			</div>
+			<div class="float-end mt-5">
+			<img  src="{{ asset('build/images/peoples.svg')}}" alt="">
+			</div>
 		</div>
 	</div>
 </div>
