@@ -5,39 +5,56 @@
 
 {% block body %}
 
-	<div class="container-fluid d-flex justify-content-between p-5">
-		<div class="col-lg-10">
-			<img src="{{ asset('build/images/title_home.svg') }}" alt="Title for home page">
+<div class="container-fluid p-5">
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="pb-5">
+				<img class="ps-5" src="{{ asset('build/images/title_home.svg') }}" alt="Title for home page">
+			</div>
+			<div class="d-flex flex-wrap">
+				<a href="/agency"><img src="{{ asset('build/images/button_myagency.svg') }}" alt="button" class="m-3"></a>
+				<a href="/agencies"><img src="{{ asset('build/images/button_theagencies.svg') }}" alt="button" class="m-3"></a>
+				<a href="/apsiders"><img src="{{ asset('build/images/button_theapsider.svg') }}" alt="button" class="m-3"></a>
+				<a href="#"><img src="{{ asset('build/images/button_theclients.svg') }}" alt="button" class="m-3"></a>
+				<a href="#"><img src="{{ asset('build/images/button_thepartners.svg') }}" alt="button" class="m-3"></a>
+				<a href="/project"><img src="{{ asset('build/images/button_myprojects.svg') }}" alt="button" class="m-3"></a>
+			</div>
 		</div>
-		<div class="col-lg-2">
-		<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title p-3 name-teammate"><img class="janika" src="{{ asset('build/images/janika.jpg') }}" alt="janika"> Janika Cortez</h5>
-                    <br>
-                    <div class="card-text text-center">
-                        <img class="btn" src="{{ asset('build/images/mail.png') }}" alt="mail">
-                        <img class="btn" src="{{ asset('build/images/calendar.png') }}" alt="calendar" >
-                    </div>
-                </div>
-            </div>
+		<div class="col-lg-4 mt-5">
+			<img src="{{ asset('build/images/illu_home.svg') }}" alt="Illustration home page">
+		</div>
+		
+		<div class="col-lg-4">
+			<div class="card mb-3 float-end rounded-box shadow" style="max-width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title p-3 name-teammate"><img class="janika" src="{{ asset('build/images/janika.jpg') }}" alt="janika"> Janika Cortez</h5>
+					<br>
+					<div class="card-text text-center">
+						<img class="btn" src="{{ asset('build/images/mail.png') }}" alt="mail">
+						<img class="btn" src="{{ asset('build/images/calendar.png') }}" alt="calendar" >
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-
-	<div class="container d-flex justify-content-center ms-5">
-		<div class="d-flex flex-column">
-            <a href="/agency"><img src="{{ asset('build/images/button_myagency.svg') }}" alt="button" class="mb-3"></a>
-            <a href="/agencies"><img src="{{ asset('build/images/button_theagencies.svg') }}" alt="button" class="mb-3"></a>
-            <a href="/apsiders"><img src="{{ asset('build/images/button_theapsider.svg') }}" alt="button" class="mb-3"></a>
-            <a href="/project"><img src="{{ asset('build/images/button_theprojects.svg') }}" alt="button" class="mb-3"></a>
-        </div>
-        <div class="d-flex flex-column mt-5 ms-3">
-                <a href="#"><img src="{{ asset('build/images/button_theclients.svg') }}" alt="button" class="mb-3"></a>
-                <a href="#"><img src="{{ asset('build/images/button_thepartners.svg') }}" alt="button" class="mb-3"></a>
-                <a href="/project"><img src="{{ asset('build/images/button_myprojects.svg') }}" alt="button" class="mb-3"></a>
-        </div>
-    <div class="container d-flex justify-content-center">
-		<img src="{{ asset('build/images/illu_home.svg') }}" alt="Illustration home page">
+</div>		
+		
+		
+			
+		{# </div>
 	</div>
+	
+		<div class="col-lg-2 mb-2 ps-5">
+			
+			<a href="/project"><img src="{{ asset('build/images/button_theprojects.svg') }}" alt="button" class="mb-3"></a>
+		</div>
+        <div class="col-lg-2 mb-2">
+			
+		</div>
+		<div class="col-lg-8 mb-5">
+			<img src="{{ asset('build/images/illu_home.svg') }}" alt="Illustration home page">
+		</div> #}
+	
 
 
 	{# <div class="container">
