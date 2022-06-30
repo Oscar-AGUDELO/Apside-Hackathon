@@ -18,9 +18,9 @@ class UserType extends AbstractType
                 'class' => User::class,
                 'autocomplete' => true,
                 'choice_label' => 'firstname',
-                'label' => 'Teammates',
+                'label' => 'Collaborators of agency',
                 'multiple' => true,
-              
+                             
 
             ])
             // ->add('lastname', EntityType::class, [

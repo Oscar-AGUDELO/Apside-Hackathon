@@ -4,19 +4,21 @@
 {% endblock %}
 
 {% block body %}
-	<div class="container me-5">
+	<div class="container-fluid mt-5 ps-5 pe-5">
 		<div class="row">
-			<div class="col-lg-8"></div>
-			<div class="col-lg-1">
+			<div class="col-lg-8 mt-5">
+                <img src="{{ asset('build/images/title_project.svg') }}" alt="Title for home page">
+            </div>
+			<div class="col-lg-1 text-end">
 				<a class="btn btn-primary mt-4 mb-5" href="{{ path('home') }}">upload</a>
 			</div>
-			<div class="col-lg-1">
+			<div class="col-lg-1 text-start">
 				<a class="btn btn-outline-primary mt-4 mb-5" href="{{ path('home') }}">download</a>
 			</div>
 			<div class="col-lg-2 mt-3">
 				<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
-                							<div class="card-header d-flex justify-content-center">
-								<img class="janika" src="{{ asset('build/images/photo_user.png') }}" alt="janika">
+                			<div class="card-header d-flex justify-content-center">
+								<img class="janika" src="{{ asset('build/images/photo_user.png') }}" alt="janika" class="mt-5 ms-5">
 							</div>
 					<div class="card-body">
 						<h5 class="card-title p-3 name-teammate">Monica Vargas</h5>
@@ -31,7 +33,7 @@
 		</div>
 		<div class="row d-flex">
 			<div class="col-lg-4">
-				<div class="card mb-3 rounded-box shadow ms-5" style="max-width: 18rem;">
+				<div class="card mb-3 rounded-box shadow ms-5 " style="max-width: 18rem;">
 					<div class="card-body">
 						{{ form(form) }}
 							<div class="card-title ps-3">
