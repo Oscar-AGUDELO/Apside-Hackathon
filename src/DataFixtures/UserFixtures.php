@@ -14,7 +14,7 @@ class UserFixtures extends Fixture
     {
         
         $faker = Factory::create('en_EN');
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             $user = new User();
             $user->setPseudo($faker->lastname);
             $user->setEmail($faker->email);
@@ -23,7 +23,7 @@ class UserFixtures extends Fixture
             $user->setLastname($faker->lastName);
             $user->setPhone($faker->phoneNumber);
             $user->setSkills($faker->text);
-            $user->setImage($faker->imageUrl(640, 480, 'people'));
+            $user->setImage('https://picsum.photos/id/' . $i . '/300/300');
             $user->setBio($faker->realText(200));
             $user->setRole($faker->randomElement(['ROLE_USER', 'ROLE_ADMIN']));
             $user->setType($faker->randomElement(['Apsiders', 'Customers']));
