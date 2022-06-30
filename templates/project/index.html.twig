@@ -3,18 +3,52 @@
 {% block title %}Hello ProjectController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Utilisateur/Desktop/WCS/hackaton 2/Apside-Hackathon/src/Controller/ProjectController.php'|file_link(0) }}">src/Controller/ProjectController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Utilisateur/Desktop/WCS/hackaton 2/Apside-Hackathon/templates/project/index.html.twig'|file_link(0) }}">templates/project/index.html.twig</a></code></li>
-    </ul>
+<div class="container me-5">
+    <div class="row">
+        <div class="col-lg-8 mt-5">
+            <h1 class="text-primary fw-bold">My Project</h1>
+            <h1 class="text-secondary fw-bold fs-1">Apside dashboard feature</h1>
+        </div>
+        <div class="col-lg-1">
+            <a class="btn btn-primary mt-4 mb-5" href="{{ path('home') }}">upload</a>
+        </div>
+        <div class="col-lg-1">
+            <a class="btn btn-outline-primary mt-4 mb-5" href="{{ path('home') }}">download</a>
+        </div>
+        <div class="col-lg-2 mt-3">
+            <div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title p-3 name-teammate"><img class="janika" src="{{ asset('build/images/janika.jpg') }}" alt="janika"> Janika Cortez</h5>
+                    <br>
+                    <div class="card-text text-center">
+                        <img class="btn" src="{{ asset('build/images/mail.png') }}" alt="mail">
+                        <img class="btn" src="{{ asset('build/images/calendar.png') }}" alt="calendar" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+    <div class="row d-flex">
+        <div class="col-lg-4">
+            <div class="card mb-3 rounded-box shadow ms-5" style="max-width: 18rem;">
+                <div class="card-body fw-bold fs-3">
+                        {{ form(form) }}
+                    <div class="card-title ps-3">
+                        {% for user in users|slice(1, 8)  %}
+                        <p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt="">   {{ user.firstname }}  {{ user.lastname }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <img class="float-end" src="{{ asset('build/images/todolist.svg')}}" alt="">
+        </div>
+        <div class="col-lg-4">
+            <img class="float-end me-5 mt-5" src="{{ asset('build/images/widecalendar.svg')}}" alt="">
+            <img class ="float-end mt-4" src="{{ asset('build/images/peoples.svg')}}" alt="">
+        </div>
+    </div>
+    
 {% endblock %}

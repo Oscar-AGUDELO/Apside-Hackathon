@@ -1,33 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LoginController!{% endblock %}
+{% block title %}Hello LoginController!
+{% endblock %}
 
 {% block body %}
-<div class="container">
-<h1 class="text-primary text-center mt-5 mb-5">Bienvenue sur la page de connexion</h1>
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-    <div class="row">
-    <div class="col-lg-6 offset-lg-3">
-            <form action="{{ path('login') }}" method="post">
-            <div class="mb-3">
-                <label class="form-label text-primary" for="email">Email</label>
-                <input class="form-control" type="text" id="email" name="_username" value=""/>
-            </div>
-            <div class="mb-3">
-                <label class="form-label text-primary" for="password">Mot de passe</label>
-                <input class="form-control" type="password" id="password" name="_password"/>
-            </div>
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-            <div class="d-flex justify-content-between mt-4">
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-primary mt-4 mb-5" type="submit">Connexion</button>
-            </div>
-        
-        </form>
-    </div>
-</div>
-</div>
+
+	<div class="container d-flex flex-column justify-content-center form-login">
+		<div class="row">
+			<div class="col-lg">
+				<h1 class="text-secondary text-center mt-5 mb-5 fw-bold">All People Support Interface
+					<br/>Development Environment Tools</h1>
+			</div>
+		</div>
+		<div class="container">
+			{% if error %}
+				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+			{% endif %}
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3 mb-5">
+					<form action="{{ path('login') }}" method="post">
+						<div>
+							<label class="form-label text-primary" for="email"></label>
+							<input class="form-control" type="text" id="email" name="_username" value="" placeholder="Email address"/>
+						</div>
+						<div>
+							<label class="form-label text-primary" for="password"></label>
+							<input class="form-control" type="password" id="password" name="_password" placeholder="Password"/>
+						</div>
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+						<div class="d-flex flex-column justify-content-start">
+							<p class="mt-3">Forgot your password?</p>
+							<a class="btn btn-primary mb-5" href="{{ path('home') }}">Connect</a>
+							{# <button class="btn btn-primary mt-4 mb-5" type="submit">Connexion</button> #}
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-lg">
+				<img src="{{ asset('build/images/page_login.svg')}}" alt="groupe de personnes" class="fixed-bottom mx-auto d-block">
+			</div>
+		</div>
+	</div>
+
 {% endblock %}

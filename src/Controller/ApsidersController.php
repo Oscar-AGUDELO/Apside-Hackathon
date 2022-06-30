@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ApsidersController extends AbstractController
 {
-    #[Route('/apsiders', name: 'app_apsiders')]
+    #[Route('/apsiders', name: 'apsiders')]
     public function index(): Response
     {
         return $this->render('apsiders/index.html.twig', [
