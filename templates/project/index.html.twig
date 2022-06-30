@@ -15,47 +15,47 @@
 			</div>
 			<div class="col-lg-2 mt-3">
 				<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
-					<div class="card-header d-flex justify-content-center">
-						<img class="janika" src="{{ asset('build/images/photo_user.png') }}" alt="janika">
-					</div>
+                							<div class="card-header d-flex justify-content-center">
+								<img class="janika" src="{{ asset('build/images/photo_user.png') }}" alt="janika">
+							</div>
 					<div class="card-body">
 						<h5 class="card-title p-3 name-teammate">Monica Vargas</h5>
-						<div class="card-text text-center">
-							<img class="btn" src="{{ asset('build/images/mail.svg') }}" alt="mail">
-							<img class="btn" src="{{ asset('build/images/calendar.svg') }}" alt="calendar">
+							<div class="card-text text-center">
+								<img class="btn" src="{{ asset('build/images/mail.svg') }}" alt="mail">
+								<img class="btn" src="{{ asset('build/images/calendar.svg') }}" alt="calendar">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row d-flex">
-		<div class="col-lg-4">
-			<div class="card mb-3 rounded-box shadow ms-5" style="max-width: 18rem;">
-				<div class="card-body">
-					{{ form(form) }}
-						<div class="card-title ps-3">
-							{% for user in users|slice(1, 8)  %}
-								<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt="">
-									{{ user.firstname }}
-									{{ user.lastname }}</p>
-							{% endfor %}
+		<div class="row d-flex">
+			<div class="col-lg-4">
+				<div class="card mb-3 rounded-box shadow ms-5" style="max-width: 18rem;">
+					<div class="card-body">
+						{{ form(form) }}
+							<div class="card-title ps-3">
+								{% for user in users|slice(1, 8)  %}
+									<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt="">
+										{{ user.firstname }}
+										{{ user.lastname }}</p>
+								{% endfor %}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4">
-				<img class="float-end" src="{{ asset('build/images/todolist.svg')}}" alt="">
-			</div>
-			<div class="col-lg-4">
-				<img class="float-end me-5 mt-5" src="{{ asset('build/images/widecalendar.svg')}}" alt="">
+				<div class="col-lg-4">
+					<img class="float-end" src="{{ asset('build/images/todolist.svg')}}" alt="">
+				</div>
+				<div class="col-lg-4">
+					<img class="float-end me-5 mt-5" src="{{ asset('build/images/widecalendar.svg')}}" alt="">
 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg">
+					<img class="float-end" src="{{ asset('build/images/peoples.svg')}}" alt="">
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg">
-				<img class="float-end" src="{{ asset('build/images/peoples.svg')}}" alt="">
-			</div>
-		</div>
-	</div>
-{% endblock %}
+	{% endblock %}
