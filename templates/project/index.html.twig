@@ -5,7 +5,9 @@
 {% block body %}
 <div class="container me-5">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 mt-5">
+            <h1 class="text-primary fw-bold">My Project</h1>
+            <h1 class="text-secondary fw-bold fs-1">Apside dashboard feature</h1>
         </div>
         <div class="col-lg-1">
             <a class="btn btn-primary mt-4 mb-5" href="{{ path('home') }}">upload</a>
@@ -45,13 +47,8 @@
         </div>
         <div class="col-lg-4">
             <img class="float-end me-5 mt-5" src="{{ asset('build/images/widecalendar.svg')}}" alt="">
-     
+            <img class ="float-end mt-4" src="{{ asset('build/images/peoples.svg')}}" alt="">
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg">
-            <img class ="float-end" src="{{ asset('build/images/peoples.svg')}}" alt="">
-        </div>
-    </div>
-</div>
+    
 {% endblock %}
