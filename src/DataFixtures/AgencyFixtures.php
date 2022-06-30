@@ -13,7 +13,7 @@ class AgencyFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create('en_EN');
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             $agency = new Agency();
             $agency->setName($faker->firstname);
             $agency->setAdress($faker->address);
