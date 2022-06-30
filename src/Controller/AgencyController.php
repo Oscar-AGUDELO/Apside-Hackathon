@@ -2,17 +2,28 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\User;
+use App\Form\UserType;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AgencyController extends AbstractController
 {
-    #[Route('/agency', name: 'agency')]
-    public function index(): Response
+    #[Route('/agency', name: 'app_agency_form')]
+    public function searchForm(UserRepository $userRepository): Response
     {
-        return $this->render('agency/index.html.twig', [
-            'controller_name' => 'AgencyController',
+        $user = new User();
+        $users = $userRepository->findAll();
+        $form = $this->createForm(UserType::class, $user);
+             
+        return $this->renderForm('agency/index.html.twig', [
+            'form' => $form,
+            'users' => $users,
         ]);
+
+        
     }
+   
 }
