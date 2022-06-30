@@ -4,11 +4,13 @@
 }
 
 .layout-full {
-    padding: 65px;
+    padding-left: 65px;
+    padding-right: 65px;
 }
 
 .round-container {
-    border-radius: 74px;
+    border-top-left-radius: 74px;
+    border-top-right-radius: 74px;
     
 }
 
