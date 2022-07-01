@@ -22,12 +22,7 @@ class UserType extends AbstractType
                 'multiple' => true,
                              
 
-            ])
-            // ->add('lastname', EntityType::class, [
-            //     'class' => User::class,
-            //     'autocomplete' => true,
-            //     'choice_label' => 'lastname',
-            // ])
+            ])         
         ;
     }
 

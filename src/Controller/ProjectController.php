@@ -12,14 +12,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ProjectController extends AbstractController
 {
-    // #[Route('/project', name: 'app_project')]
-    // public function index(): Response
-    // {
-    //     return $this->render('project/index.html.twig', [
-    //         'controller_name' => 'ProjectController',
-    //     ]);
-    // }
-
     #[Route('/project', name: 'app_project_form')]
     public function searchForm(UserRepository $userRepository): Response
     {
@@ -31,9 +23,5 @@ class ProjectController extends AbstractController
             'form' => $form,
             'users' => $users,
         ]);
-
-        
-    }
-
-   
+   }
 }

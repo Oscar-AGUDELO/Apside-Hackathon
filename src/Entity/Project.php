@@ -11,19 +11,19 @@ class Project
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private $id;
+    private int $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $name;
+    private string $name;
 
     #[ORM\Column(type: 'text')]
-    private $summary;
+    private string $summary;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image;
+    private string $image;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $files;
+    private string $files;
 
     #[ORM\Column(type: 'datetime', nullable: true)]
     private $createdAt;
@@ -32,10 +32,10 @@ class Project
     private $deadlineAt;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $skills;
+    private string $skills;
 
     #[ORM\Column(type: 'text', nullable: true)]
-    private $description;
+    private string $description;
 
     #[ORM\ManyToOne(targetEntity: Agency::class, inversedBy: 'Project')]
     private $agency;

@@ -9,10 +9,8 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class UserFixtures extends Fixture
 {
-    
     public function load(ObjectManager $manager): void
     {
-        
         $faker = Factory::create('en_EN');
         for ($i = 0; $i < 30; $i++) {
             $user = new User();
@@ -32,6 +30,4 @@ class UserFixtures extends Fixture
           }
         $manager->flush();
     }
-
-    
 }

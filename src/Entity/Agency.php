@@ -13,28 +13,28 @@ class Agency
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private $id;
+    private int $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $name;
+    private string $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $adress;
+    private string $adress;
 
     #[ORM\Column(type: 'string', length: 100)]
-    private $zipcode;
+    private string $zipcode;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $city;
+    private string $city;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $country;
+    private string $country;
 
     #[ORM\Column(type: 'text')]
-    private $description;
+    private string $description;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image;
+    private string $image;
 
     #[ORM\OneToMany(mappedBy: 'agency', targetEntity: Project::class)]
     private $Project;

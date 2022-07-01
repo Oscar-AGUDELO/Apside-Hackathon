@@ -26,8 +26,6 @@ class AgencyFixtures extends Fixture
             $this->addReference('project_' . $i, $agency);
             $manager->persist($agency);
         }
-        
-        $manager->flush();
+    $manager->flush();
     }
-
 }

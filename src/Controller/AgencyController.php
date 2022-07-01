@@ -22,8 +22,5 @@ class AgencyController extends AbstractController
             'form' => $form,
             'users' => $users,
         ]);
-
-        
-    }
-   
+   }
 }

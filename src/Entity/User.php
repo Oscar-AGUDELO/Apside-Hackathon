@@ -11,40 +11,40 @@ class User
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private $id;
+    private int $id;
 
     #[ORM\Column(type: 'string', length: 50, nullable: true)]
     private $pseudo;
 
     #[ORM\Column(type: 'string', length: 50)]
-    private $firstname;
+    private string $firstname;
 
     #[ORM\Column(type: 'string', length: 100)]
-    private $lastname;
+    private string $lastname;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $password;
+    private string $password;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $email;
+    private string $email;
 
     #[ORM\Column(type: 'string', length: 50)]
-    private $phone;
+    private string $phone;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $skills;
+    private string $skills;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image;
+    private string $image;
 
     #[ORM\Column(type: 'text', nullable: true)]
-    private $bio;
+    private string $bio;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $role;
+    private string $role;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $type;
+    private string $type;
 
     #[ORM\ManyToOne(targetEntity: Agency::class, inversedBy: 'User')]
     private $agency;
