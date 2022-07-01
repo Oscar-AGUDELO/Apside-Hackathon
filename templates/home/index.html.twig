@@ -1,40 +1,41 @@
 {% extends 'layoutFull.html.twig' %}
 
-{% block title %}Home Apside tools{% endblock %}
+{% block title %}Home Apside tools
+{% endblock %}
 
 {% block body %}
-<div class="container-fluid p-5">
-	<div class="row">
-		<div class="col-lg-4">
-			<div class="pb-5">
-				<img class="ps-5" src="{{ asset('build/images/title_home.svg') }}" alt="Title for home page">
+	<div class="container-fluid p-5">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="pb-5">
+					<img class="ps-5" src="{{ asset('build/images/title_home.svg') }}" alt="Title for home page">
+				</div>
+				<div class="d-flex flex-wrap">
+					<a href="/agency"><img src="{{ asset('build/images/button_myagency.svg') }}" alt="button" class="m-3"></a>
+					<a href="/agencies"><img src="{{ asset('build/images/button_theagencies.svg') }}" alt="button" class="m-3"></a>
+					<a href="/apsiders"><img src="{{ asset('build/images/button_theapsider.svg') }}" alt="button" class="m-3"></a>
+					<a href="#"><img src="{{ asset('build/images/button_theclients.svg') }}" alt="button" class="m-3"></a>
+					<a href="#"><img src="{{ asset('build/images/button_thepartners.svg') }}" alt="button" class="m-3"></a>
+					<a href="/project"><img src="{{ asset('build/images/button_myprojects.svg') }}" alt="button" class="m-3"></a>
+				</div>
 			</div>
-			<div class="d-flex flex-wrap">
-				<a href="/agency"><img src="{{ asset('build/images/button_myagency.svg') }}" alt="button" class="m-3"></a>
-				<a href="/agencies"><img src="{{ asset('build/images/button_theagencies.svg') }}" alt="button" class="m-3"></a>
-				<a href="/apsiders"><img src="{{ asset('build/images/button_theapsider.svg') }}" alt="button" class="m-3"></a>
-				<a href="#"><img src="{{ asset('build/images/button_theclients.svg') }}" alt="button" class="m-3"></a>
-				<a href="#"><img src="{{ asset('build/images/button_thepartners.svg') }}" alt="button" class="m-3"></a>
-				<a href="/project"><img src="{{ asset('build/images/button_myprojects.svg') }}" alt="button" class="m-3"></a>
+			<div class="col-lg-6 mt-5">
+				<img src="{{ asset('build/images/illu_home.svg') }}" alt="Illustration home page">
 			</div>
-		</div>
-		<div class="col-lg-4 mt-5">
-			<img class="rotating" src="{{ asset('build/images/illu_home.svg') }}" alt="Illustration home page">
-		</div>
-		<div class="col-lg-4">
-			<div class="card mb-3 float-end rounded-box shadow" style="max-width: 18rem;">
+		<div class="col-lg-2 d-flex flex-column justify-content-between">
+			<div class="card mb-3 rounded-box shadow float-end" style="max-width: 18rem;">
 				<div class="card-header d-flex justify-content-center">
-					<img class="janika" src="{{ asset('build/images/photo_user.png') }}" alt="janika" class="mt-5 ms-5">
+					<img class="janika" src="{{ asset('build/images/jackhall.png') }}" alt="janika" class="mt-5 ms-5">
 				</div>
 				<div class="card-body">
-					<h5 class="card-title p-3 name-teammate text-center">Monica Vargas</h5>
-				</div>
-				<div class="card-text text-center">
-					<img class="btn" src="{{ asset('build/images/mail.svg') }}" alt="mail">
-					<img class="btn" src="{{ asset('build/images/calendar.svg') }}" alt="calendar">
+					<h5 class="card-title p-3 name-teammate text-center">Jack Hall</h5>
+					<div class="card-text text-center">
+						<img class="btn" src="{{ asset('build/images/mail.svg') }}" alt="mail">
+						<img class="btn" src="{{ asset('build/images/calendar.svg') }}" alt="calendar">
+					</div>
 				</div>
 			</div>
+		<div>
 		</div>
 	</div>
-</div>		
 {% endblock %}

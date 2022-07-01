@@ -1,36 +1,81 @@
 {% extends 'layoutFull.html.twig' %}
 
-{% block title %}Mon Agence{% endblock %}
+{% block title %}Mon Agence
+{% endblock %}
 
 {% block body %}
-<div class="container-fluid p-5">
-	<div class="row">
-		<div class="col">
-			<h1 class="text-primary fw-bold">L'Agence Apsider - Paris&nbsp(FR)</h1>
-			<ul class="list-inline fw-bold pe-5">
-				<li>tel : +33 01 41 10 01 81
-				</li>
-				<li>58 rue de l'église 92154 Boulogne cedex
-				</li>
-				<li>Notre ESN de Paris est composée de plusieurs équipes : Apside Technologies (ingénierie industrielle), Apside HTi (ingénierie automobile), Apside Infogérance (infrastructure), Apside Gestion (ingénierie des systèmes d’information) et Keley (conseil).
-				</li>
-			</ul>
-			<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
-				<div class="card-body">
-					{{ form(form) }}
-					<div class="card-title ps-3">
-						{% for user in users|slice(1, 6)  %}
-							<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt=""><a class="text-decoration-none" href="/apsiders">{{ user.firstname }}  {{ user.lastname }}</a></p>
-						{% endfor %}
+	<div class="container-fluid p-5">
+		<div class="row">
+			<div class="col">
+				<h1 class="text-primary fw-bold">L'Agence Apsider - Paris&nbsp(FR)</h1>
+				<ul class="list-inline fw-bold pe-5">
+					<li>tel : +33 01 41 10 01 81
+					</li>
+					<li>58 rue de l'église 92154 Boulogne cedex
+					</li>
+					<li>Notre ESN de Paris est composée de plusieurs équipes : Apside Technologies (ingénierie industrielle), Apside HTi (ingénierie automobile), Apside Infogérance (infrastructure), Apside Gestion (ingénierie des systèmes d’information) et Keley (conseil).
+					</li>
+				</ul>
+				<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
+					<div class="card-body">
+						{{ form(form) }}
+							<div class="card-title ps-3">
+								{% for user in users|slice(1, 6)  %}
+									<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt="">
+										{{ user.firstname }}
+										{{ user.lastname }}</p>
+								{% endfor %}
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="col">
-			<div class="card mb-3 rounded-box shadow ms-5" style="max-width: 25rem;">
-				<div class="card rounded-box bg-info m-4">
-					<div class="card-title pe-3 ps-3">
-						<h5 class="text-primary fw-bold">Projet</h5>
+				<div class="col">
+					<div class="card mb-3 rounded-box shadow ms-5" style="max-width: 25rem;">
+						<div class="card rounded-box bg-info m-4">
+							<div class="card-title pe-3 ps-3">
+								<h5 class="text-primary fw-bold">Projet</h5>
+							</div>
+							<div class="card-text pe-3 ps-3">
+								<h6 class="text-primary">Apside Technologies</h6>
+							</div>
+							<div class="card-text pe-3 ps-3">
+								<p>L'équipe Apsider Technologies est composée de plusieurs ingénieurs
+								</p>
+							</div>
+						</div>
+						<div class="mx-auto mb-5">
+							<a class="btn btn-primary mx-auto" href="{{ path('home') }}">See the Project</a>
+						</div>
+						<div class="card rounded-box bg-info m-4">
+							<div class="card-title pe-3 ps-3">
+								<h5 class="text-primary fw-bold">Projet</h5>
+							</div>
+							<div class="card-text pe-3 ps-3">
+								<h6 class="text-primary">Apside Technologies</h6>
+							</div>
+							<div class="card-text pe-3 ps-3">
+								<p>L'équipe Apsider Technologies est composée de plusieurs ingénieurs
+								</p>
+							</div>
+						</div>
+						<div class="mx-auto mb-5">
+							<a class="btn btn-primary mx-auto" href="{{ path('home') }}">See the Project</a>
+						</div>
+						<div class="card rounded-box bg-info m-4">
+							<div class="card-title pe-3 ps-3">
+								<h5 class="text-primary fw-bold">Projet</h5>
+							</div>
+							<div class="card-text pe-3 ps-3">
+								<h6 class="text-primary">Apside Technologies</h6>
+							</div>
+							<div class="card-text pe-3 ps-3">
+								<p>L'équipe Apsider Technologies est composée de plusieurs ingénieurs
+								</p>
+							</div>
+						</div>
+						<div class="mx-auto mb-5">
+							<a class="btn btn-primary mx-auto" href="{{ path('home') }}">See the Project</a>
+						</div>
 					</div>
 					<div class="card-text pe-3 ps-3">
 						<h6 class="text-primary">Apside Technologies</h6>
@@ -43,56 +88,20 @@
 				<div class="mx-auto mb-5">
 					<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
 				</div>
-				<div class="card rounded-box bg-info m-4">
-					<div class="card-title pe-3 ps-3">
-						<h5 class="text-primary fw-bold">Projet</h5>
+				<div class="col-lg-2 mt-3">
+					<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
+						<div class="card-header d-flex justify-content-center">
+							<img class="janika" src="{{ asset('build/images/jackhall.png') }}" alt="janika" class="mt-5 ms-5">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title p-3 name-teammate text-center">Jack Hall</h5>
+						</div>
+						<div class="card-text text-center">
+							<img class="btn" src="{{ asset('build/images/mail.svg') }}" alt="mail">
+							<img class="btn" src="{{ asset('build/images/calendar.svg') }}" alt="calendar">
+						</div>
 					</div>
-					<div class="card-text pe-3 ps-3">
-						<h6 class="text-primary">Apside Technologies</h6>
-					</div>
-					<div class="card-text pe-3 ps-3">
-						<p>L'équipe Apsider Technologies est composée de plusieurs ingénieurs
-						</p>
-					</div>
-				</div>
-				<div class="mx-auto mb-5">
-					<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
-				</div>
-				<div class="card rounded-box bg-info m-4">
-					<div class="card-title pe-3 ps-3">
-						<h5 class="text-primary fw-bold">Projet</h5>
-					</div>
-					<div class="card-text pe-3 ps-3">
-						<h6 class="text-primary">Apside Technologies</h6>
-					</div>
-					<div class="card-text pe-3 ps-3">
-						<p>L'équipe Apsider Technologies est composée de plusieurs ingénieurs
-						</p>
-					</div>
-				</div>
-				<div class="mx-auto mb-5">
-					<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
 				</div>
 			</div>
 		</div>
-		<div class="col d-flex flex-column align-items-end">
-			<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
-				<div class="card-header d-flex justify-content-center">
-					<img class="janika" src="{{ asset('build/images/photo_user.png') }}" alt="janika" class="mt-5 ms-5">
-				</div>
-				<div class="card-body">
-					<h5 class="card-title p-3 name-teammate text-center">Monica Vargas</h5>
-				</div>
-				<div class="card-text text-center">
-					<img class="btn" src="{{ asset('build/images/mail.svg') }}" alt="mail">
-					<img class="btn" src="{{ asset('build/images/calendar.svg') }}" alt="calendar">
-				</div>
-			</div>
-			<div>
-				<img class="float-end mt-5 me-5" src="{{ asset('build/images/widecalendar.svg')}}" alt="">
-				<img class="float-end mt-3" src="{{ asset('build/images/peoples.svg')}}" alt="">
-			</div>
-		</div>
-	</div>
-</div>
-{% endblock %}
+	{% endblock %}
