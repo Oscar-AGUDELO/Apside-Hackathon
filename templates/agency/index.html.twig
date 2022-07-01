@@ -1,6 +1,6 @@
 {% extends 'layoutFull.html.twig' %}
 
-{% block title %}Mon Agence
+{% block title %}My Agency
 {% endblock %}
 
 {% block body %}
@@ -21,9 +21,7 @@
 						{{ form(form) }}
 							<div class="card-title ps-3">
 								{% for user in users|slice(1, 6)  %}
-									<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt="">
-										{{ user.firstname }}
-										{{ user.lastname }}</p>
+										<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt=""><a class="text-decoration-none" href="/apsiders">  {{ user.firstname }}  {{ user.lastname }}</a></p>
 								{% endfor %}
 							</div>
 						</div>
@@ -44,7 +42,7 @@
 							</div>
 						</div>
 						<div class="mx-auto mb-5">
-							<a class="btn btn-primary mx-auto" href="{{ path('home') }}">See the Project</a>
+							<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
 						</div>
 						<div class="card rounded-box bg-info m-4">
 							<div class="card-title pe-3 ps-3">
@@ -59,7 +57,7 @@
 							</div>
 						</div>
 						<div class="mx-auto mb-5">
-							<a class="btn btn-primary mx-auto" href="{{ path('home') }}">See the Project</a>
+							<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
 						</div>
 						<div class="card rounded-box bg-info m-4">
 							<div class="card-title pe-3 ps-3">
@@ -74,19 +72,9 @@
 							</div>
 						</div>
 						<div class="mx-auto mb-5">
-							<a class="btn btn-primary mx-auto" href="{{ path('home') }}">See the Project</a>
+							<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
 						</div>
 					</div>
-					<div class="card-text pe-3 ps-3">
-						<h6 class="text-primary">Apside Technologies</h6>
-					</div>
-					<div class="card-text pe-3 ps-3">
-						<p>L'équipe Apsider Technologies est composée de plusieurs ingénieurs
-						</p>
-					</div>
-				</div>
-				<div class="mx-auto mb-5">
-					<a class="btn btn-primary mx-auto" href="/project">See the Project</a>
 				</div>
 				<div class="col-lg-2 mt-3">
 					<div class="card mb-3 rounded-box shadow" style="max-width: 18rem;">
@@ -102,6 +90,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
-	{% endblock %}
+	</div>
+{% endblock %}

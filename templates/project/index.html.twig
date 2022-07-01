@@ -1,6 +1,6 @@
 {% extends 'layoutFull.html.twig' %}
 
-{% block title %}Hello ProjectController!
+{% block title %}Project
 {% endblock %}
 
 {% block body %}
@@ -37,7 +37,7 @@
 					{{ form(form) }}
 					<div class="card-title ps-3">
 						{% for user in users|slice(1, 4)  %}
-						<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt=""><a class="text-decoration-none" href="/apsiders">{{ user.firstname }}  {{ user.lastname }}</a></p>
+						<p class="name-teammate"><img class="trombi" src="{{ user.image }}" alt=""><a class="text-decoration-none" href="/apsiders">  {{ user.firstname }}  {{ user.lastname }}</a></p>
 						{% endfor %}
 					</div>
 				</div>
